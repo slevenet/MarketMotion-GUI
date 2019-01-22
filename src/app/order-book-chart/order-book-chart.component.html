@@ -1,0 +1,13 @@
+<h2>Here is OrderBook</h2>
+
+<ul class="orderBookCharts">
+  <li *ngFor="let orderBookChart of orderBookCharts"
+      [class.selected]="orderBookChart === selectedOrderBookChart"
+      (click)="onSelect(orderBookChart)">
+    <span class="badge">{{orderBookChart.instrumentName}}</span>
+  </li>
+</ul>
+
+<div *ngIf="currentChart">
+  <p-chart type="horizontalBar" [data]="currentChart" [options]="options"></p-chart>
+</div>
