@@ -12,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { ChartModule } from 'primeng/chart';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ChartModule } from 'primeng/chart';
     ButtonModule,
     TableModule,
     DialogModule,
-    ChartModule
+    ChartModule,
+    AppRoutingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
