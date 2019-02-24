@@ -9,13 +9,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatSidenavModule} from '@angular/material';
+import {MarketComponent} from './market/market.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrderBookChartComponent,
     HomeComponent,
-    BlogComponent
+    BlogComponent,
+    MarketComponent
   ],
   imports: [
     BrowserModule,
