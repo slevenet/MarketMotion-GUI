@@ -1,26 +1,19 @@
 
 <div class="notePanel">
-  <div class="noteBlock">
-    <div>
-      <img src="../../assets/img/money.png" style="max-height: 250px; max-width: 300px;">
-    </div>
 
-    <div>
-      <div >
-        <div >
-          vsfvsvdsfvsdvsvdvsdvsdvsdvsdvsvsvsfvsdfvdfs
-          vbdfsbdfsbdsgfbdfgsfbgbfgbfrgbsrtfdbttfdbtgrbstgr
-          Body Contentnksbbdvbsdkvb,sdbvksdbkvbksdbvksv
-          sfvsfvsvdsfvsdvsvdvsdvsdvsdvsdvsvsvsfvsdfvdfs
-          vbdfsbdfsbdsgfbdfgsfbgbfgbfrgbsrtfdbttfdbtgrbstgr
-          Body Contentnksbbdvbsdkvb,sdbvksdbkvbksdbvksv
-          sfvsfvsvdsfvsdvsvdvsdvsdvsdvsdvsvsvsfvsdfvdfs
-          vbdfsbdfsbdsgfbdfgsfbgbfgbfrgbsrtfdbttfdbtgrbstgr
-          Body Contentnksbbdvbsdkvb,sdbvksdbkvbksdbvksv
-          sfvsfvsvdsfvsdvsvdvsdvsdvsdvsdvsvsvsfvsdfvdfs
-          vbdfsbdfsbdsgfbdfgsfbgbfgbfrgbsrtfdbttfdbtgrbstgr
-        </div>
+  <mat-list>
+    <h3 mat-subheader>Blog notes</h3>
+  </mat-list>
+
+  <mat-list-item *ngFor="let note of notes">
+    <div class="noteBlock">
+      <div style="float: left;">
+        <img src="../../assets/img/money.png" style="max-height: 250px; max-width: 300px;">
+      </div>
+
+      <div class="descriptionBlock">
+        {{note.description}}
       </div>
     </div>
-  </div>
+  </mat-list-item>
 </div>

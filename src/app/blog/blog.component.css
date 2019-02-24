@@ -1,10 +1,21 @@
 .notePanel .noteBlock {
-  background-color: aqua;
+  background-color: lightsteelblue;
   border: 2px solid gainsboro;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 5px;
+}
+
+.noteBlock .descriptionBlock {
+  overflow-wrap: break-word;
+  flex-grow: 1;
+  min-width: 600px;
+  border: 2px solid crimson;
+  text-align: left;
+  display: inline-block;
+  overflow: hidden;
 }
 
 /* >>> - переопределяет стиль для правого элемента из дерева внутри левого (даже через несколько уровней) */
