@@ -73,10 +73,12 @@ export class OrderBookChartComponent implements OnInit {
 
     console.log(neededBuckets);
 
+    // makes a dataset with pure volumes
     const datasets: BarDataset = new BarDataset(book.time, neededBuckets.map(x => x.longCountPercent - x.shortCountPercent));
     this.currentChart = new OrderBookChartData(labels, datasets);
   }
 
+  // returns the index of the first price greater than market's one
   private getMarketPriceIndex() {
     const book: OrderBook = this.selectedOrderBookChart.orderBook;
 
