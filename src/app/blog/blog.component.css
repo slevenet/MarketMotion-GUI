@@ -1,0 +1,13 @@
+.notePanel .noteBlock {
+  background-color: aqua;
+  border: 2px solid gainsboro;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* >>> - переопределяет стиль для правого элемента из дерева внутри левого (даже через несколько уровней) */
+/*.notePanel >>> .ui-scrollpanel-content {*/
+  /*padding: 0 20px;*/
+/*}*/
