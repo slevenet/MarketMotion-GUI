@@ -10,6 +10,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatSidenavModule} from '@angular/material';
 import {MarketComponent} from './market/market.component';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MarketComponent} from './market/market.component';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleChartsModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
