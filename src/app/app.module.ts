@@ -10,7 +10,8 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatSidenavModule} from '@angular/material';
 import {MarketComponent} from './market/market.component';
-import { GoogleChartsModule } from 'angular-google-charts';
+import { DxChartModule } from 'devextreme-angular';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 @NgModule({
   declarations: [
@@ -28,10 +29,11 @@ import { GoogleChartsModule } from 'angular-google-charts';
     MatSidenavModule,
     MatButtonModule,
     AppRoutingModule,
-    GoogleChartsModule
+    DxChartModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule);

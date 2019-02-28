@@ -1,21 +1,25 @@
 import { Component } from '@angular/core';
+import {Service, StockPrice} from './market.service';
 @Component({
   selector: 'app-marker',
   templateUrl: './market.component.html',
-  styleUrls: ['./market.component.css']
+  styleUrls: ['./market.component.css'],
+  providers: [Service]
 })
 export class MarketComponent {
-  title = '';
-  type = 'CandlestickChart';
-  data = [
-    ['Mon', 20, 28, 38, 45],
-    ['Tue', 31, 38, 55, 66],
-    ['Wed', 50, 55, 77, 80],
-    ['Thu', 77, 77, 66, 50],
-    ['Fri', 68, 66, 22, 15]
-  ];
-  columnNames = ['Date', 'A', 'B', 'C', 'D'];
-  options = { };
-  width = 550;
-  height = 400;
+  stockPrices: StockPrice[];
+
+  dt = new Date(1994, 2, 4);
+
+  constructor(service: Service) {
+    this.stockPrices = service.getStockPrices();
+  }
+  customizeTooltip(arg) {
+    return {
+      text: 'Open: $' + arg.openValue + '<br/>' +
+        'Close: $' + arg.closeValue + '<br/>' +
+        'High: $' + arg.highValue + '<br/>' +
+        'Low: $' + arg.lowValue + '<br/>'
+    };
+  }
 }
