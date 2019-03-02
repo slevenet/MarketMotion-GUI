@@ -30,25 +30,22 @@
     type="candlestick">
   </dxo-common-series-settings>
   <dxo-legend itemTextPosition="left"></dxo-legend>
+
   <dxi-value-axis [tickInterval]="1">
-    <dxo-title text="US dollars"></dxo-title>
-    <dxo-label>
-      <dxo-format
-        type="currency"
-        [precision]="0">
-      </dxo-format>
-    </dxo-label>
+    <dxi-constant-line [width]="2" [value]="25.5" color="#8c8cff">
+      <dxo-label text="Low Average"></dxo-label>
+    </dxi-constant-line>
+    <dxi-constant-line [width]="2" [value]="28" color="#ff7c7c" >
+      <dxo-label text="High Average"></dxo-label>
+    </dxi-constant-line>
   </dxi-value-axis>
+
   <dxo-argument-axis [workdaysOnly]="true">
     <dxo-label format="shortDate"></dxo-label>
-    <dxi-constant-line
-      [width]="1"
-      [value]="dt"
-      color="#8c8cff"
-      dashStyle="dash">
-    </dxi-constant-line>
   </dxo-argument-axis>
+
   <dxo-export [enabled]="true"></dxo-export>
+
   <dxo-tooltip
     [enabled]="true"
     location="edge"
